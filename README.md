@@ -1,6 +1,6 @@
 
 <h1 align="center">Aspire Repayment App Using Laravel </h1>
-<h3 align="center">A baisc loans and  payment app in laravel using api.</h3>
+<h3 align="center">A basic loans and  payment app in laravel using api.</h3>
 
 ## Built with
 - [Laravel 10](https://github.com/laravel/framework)
@@ -27,9 +27,11 @@
      #DB_PASSWORD=  
 ```
 
-## PostMan Collection 
+## PostMan Dcoumentation Link  
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/25590512/2s9YCARA5M)
-https://documenter.getpostman.com/view/25590512/2s9YCARA5M
+
+
+[https://documenter.getpostman.com/view/25590512/2s9YCARA5M](https://documenter.getpostman.com/view/25590512/2s9YCARA5M)
 
 ## Api Sequence 
 
