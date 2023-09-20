@@ -29,54 +29,59 @@
 
 ## PostMan Collection 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/25590512/2s9YCARA5M)
+https://documenter.getpostman.com/view/25590512/2s9YCARA5M
 
 ## Api Sequence 
 
-## - Admin 
+## Admin 
 
--- Register Admin
+- Register Admin
+
     {{base_url}}/api/admin/register
 
--- Login Admin
+- Login Admin
+
     {{base_url}}/api/admin/login
 
 ####   All Endpoint require  {{token}} for  getting admin id toekn can be found from login api
 
--- Get all All User Loan List
+- Get all All User Loan List
 
     {{base_url}}/api/admin/getAllUserLoanList
 
--- Get Single User Loan
+- Get Single User Loan
+
     {{base_url}}/api/admin/getSingleUserLoan
 
--- Approve Single Loan By Admin
+- Approve Single Loan By Admin
+
     {{base_url}}/api/admin/approveSingleLoanByAdmin
 
-## -  User
+## User
 
--- Register User
+- Register User
     
     {{base_url}}/api/user/register
 
--- Login User
+- Login User
     
     {{base_url}}/api/user/login
 
 ####   All Endpoint require  {{token}} for  getting user id toekn can be found from user login api
 
--- Create Loan User
+- Create Loan User
 
     {{base_url}}/api/user/createLoan
 
--- User Loan  List
+- User Loan  List
 
     {{base_url}}/api/user/userLoanList
 
--- User Single Loan Info 
+- User Single Loan Info 
     
     {{base_url}}/api/user/userSingleLoan
 
--- User Single Loan Repayment  
+- User Single Loan Repayment  
 
     {{base_url}}/api/user/loanRepayment;
 
