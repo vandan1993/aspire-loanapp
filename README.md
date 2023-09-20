@@ -27,7 +27,7 @@
      #DB_PASSWORD=  
 ```
 
-## PostMan Dcoumentation Link  
+## PostMan Documentation Link  
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/25590512/2s9YCARA5M)
 
 
