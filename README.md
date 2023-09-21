@@ -87,5 +87,13 @@
 
     {{base_url}}/api/user/loanRepayment;
 
+## Test Case
+
+- Execute Below command to run test case 
+
+```
+    php artisan test --testsuite=Feature --filter=AdminFeatureTest
+```
+
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

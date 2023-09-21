@@ -24,9 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('admin/register' , [AdminAuthController::class , 'registerUser']);
 Route::post('user/register' , [AuthController::class , 'registerUser']);
 
-Route::get('admin/login', [AdminAuthController::class , 'login']);
+Route::post('admin/login', [AdminAuthController::class , 'login']);
 
-Route::get('user/login', [AuthController::class , 'login']);
+Route::post('user/login', [AuthController::class , 'login']);
 
 
 Route::middleware(['auth:sanctum', 'type.admin'])->prefix('admin')->group(function () {
