@@ -89,6 +89,11 @@
 
 ## Test Case
 
+- Test sqlite database has to be configure  
+```
+    database/testdatabase.sqlite
+```
+
 - Execute Below command to run test case 
 
 ```
