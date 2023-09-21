@@ -235,5 +235,104 @@ class AdminFeatureTest extends TestCase
     }
 
 
+    public function test_user_single_loan_where_status_is_pending(){
+        global $userToken;
+        $utoken = $userToken;
+
+        $userData = [
+            "loan_id" => 1 ,
+        ];
+
+        $header = ['Accept' => 'application/json' , 'Authorization' => "Bearer " . $utoken ] ;
+        
+        $response =$this->json('POST', '/api/user/userSingleLoan', $userData, $header );
+         //dump($response->decodeResponseJson());                    
+       $response->assertStatus(200)
+            ->assertJsonStructure([
+                "status",
+                "message",
+                "data" => [
+                    "loan_data" =>[
+                        
+                    ],
+                    "repayment_data"
+                ]
+            ]);
+
+        $code = $response->decodeResponseJson();
+        if($code['data']['loan_data'][0]['status'] == "PENDING"){
+            $this->assertTrue(true);
+        }else{
+            $this->assertTrue(false);
+        }
+
+    }
+
+    public function test_admin_approve_user_loan(){
+        global $adminToken;
+        $atoken = $adminToken;
+
+        $userData = [
+            "user_id" => 1 ,
+            "loan_id" => 1,
+        ];
+
+        $header = ['Accept' => 'application/json' , 'Authorization' => "Bearer " . $adminToken ] ;
+        
+        $response =$this->json('POST', '/api/admin/approveSingleLoanByAdmin', $userData, $header );
+        // dd($response->decodeResponseJson());                    
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                "status",
+                "message",
+                "data" => [
+                    "loan_data" =>[
+                    ],
+                ]
+            ]);
+
+        $code = $response->decodeResponseJson();
+        if($code['message'] == "Single Loan Status Approved"){
+            $this->assertTrue(true);
+        }else{
+            $this->assertTrue(false);
+        }   
+    }
+
+    public function test_user_single_loan_where_status_is_approved(){
+        global $userToken;
+        $utoken = $userToken;
+
+        $userData = [
+            "loan_id" => 1 ,
+        ];
+
+        $header = ['Accept' => 'application/json' , 'Authorization' => "Bearer " . $utoken ] ;
+        
+        $response =$this->json('POST', '/api/user/userSingleLoan', $userData, $header );
+         //dump($response->decodeResponseJson());                    
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                "status",
+                "message",
+                "data" => [
+                    "loan_data" =>[
+                        
+                    ],
+                    "repayment_data"
+                ]
+            ]);
+
+        $code = $response->decodeResponseJson();
+        if($code['data']['loan_data'][0]['status'] == "APPROVED"){
+            $this->assertTrue(true);
+        }else{
+            $this->assertTrue(false);
+        }
+
+    }
+
+
+
 
 }
