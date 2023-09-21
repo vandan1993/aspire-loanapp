@@ -104,16 +104,19 @@
 - Test Result Sample
 ```
   PASS  Tests\Feature\AdminFeatureTest
-  ✓ reset table                          0.50s  
-  ✓ successful admin registration        0.04s  
-  ✓ successful admin login               0.03s  
-  ✓ successful user registration         0.02s  
-  ✓ successful user login                0.02s  
-  ✓ tokens                               0.01s  
-  ✓ user create loan                     0.06s  
-  ✓ admin get all user loan list         0.02s  
+  ✓ reset table                                         0.50s  
+  ✓ successful admin registration                       0.04s  
+  ✓ successful admin login                              0.03s  
+  ✓ successful user registration                        0.02s  
+  ✓ successful user login                               0.02s  
+  ✓ tokens                                              0.01s  
+  ✓ user create loan                                    0.06s  
+  ✓ admin get all user loan list                        0.02s  
+  ✓ user single loan where status is pending            0.01s  
+  ✓ admin approve user loan                             0.01s  
+  ✓ user single loan where status is approved           0.01s  
 
-  Tests:    8 passed (66 assertions)
+  Tests:    11 passed (86 assertions)
   Duration: 0.74s
 
 ```
