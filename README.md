@@ -98,7 +98,24 @@
 
 ```
     php artisan test --testsuite=Feature --filter=AdminFeatureTest
+
 ```
 
+- Test Result Sample
+```
+  PASS  Tests\Feature\AdminFeatureTest
+  ✓ reset table                          0.50s  
+  ✓ successful admin registration        0.04s  
+  ✓ successful admin login               0.03s  
+  ✓ successful user registration         0.02s  
+  ✓ successful user login                0.02s  
+  ✓ tokens                               0.01s  
+  ✓ user create loan                     0.06s  
+  ✓ admin get all user loan list         0.02s  
+
+  Tests:    8 passed (66 assertions)
+  Duration: 0.74s
+
+```
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
